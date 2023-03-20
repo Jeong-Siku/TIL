@@ -191,6 +191,13 @@ vscode extension : Live server , prettier , colorize , DotENV , Output Colorizer
     - a : 태그명
     - href : 속성명
     - "" : 속성값
+      - `id` : 전체 문서에서 `단 하나`만 부여  
+         `중복된 id 값 존재 x`  
+         고유한 엘리먼트 지정
+      - `class` : `중복`이 가능하게 부여 가능, `여러 개` 부여 가능  
+         중복되는 스타일링
+      - name
+        - form에만 쓰인다.
 
 ## DOM(Document Object Model, 문서 내 객체 구조)
 
@@ -205,3 +212,202 @@ vscode extension : Live server , prettier , colorize , DotENV , Output Colorizer
   - 형제 : prev sibling, next sibling(기준을 바탕으로)
     - 자식은 자손에 포함된다
     - 자손은 자식에 포함되지 않는다.
+
+# CSS(Cascade Style Sheet)
+
+> cascade(상속?)-DOM과 관련,자손과 자식에 영향  
+> **2023.03.20 (월)**
+
+## 1. 태그\*아이디\*클래스 선택자
+
+- style sheet는 head에서 작업
+- style 태그를 작성 후 내부에 태그 선택자를 작성
+  - 태그 선택자
+    - 태그명{}
+  - 아이디 선택자
+    - #id명{}
+  - 클래스선택자
+    - .클래스속성값{}
+    - 여러 클래스를 동시에 선택
+      - .클래스속성값.클래스명속성값...{}
+    - 태그에서 특정 클래스만 선택
+      - 태그.클래스명{}
+
+## 02. cascade\_성질확인
+
+> 부모엘리먼트를 스타일링하면 그 성질이 자손에게 전해진다.  
+> DOM과 연관있다.
+
+## 03. 관계선택자
+
+> 부모, 형제, 자식, 자손  
+> css는 부모, 형제는 사용하지 않는다.
+
+- ★✭★자식 선택자
+  - `>`
+  - 부모 > 자식
+  - .부모속성값 > .자식속성값
+- 자손 선택자(부모 자손): `전부` 다 가져온다. 그리디하다
+  - `공백`
+  - .부모속성값 .자식속성값
+
+## 04. 속성선택자(attribute selector)
+
+- `[속성명="속성값"]`{}
+- 일반적으로는 태그명을 앞에 붙여서 사용
+- 태그명[속성명="속성값"]{}
+
+## 05. 가상선택자
+
+> 있을 수도 있고, 없을 수도 있는데, 있으면 선택
+
+- not selector
+  - 선택자1 중에 선택자 2가 `아닌 것`
+  - .선택자1:`not`(.선택자2){}
+- `nth-child`
+  - n: 숫자
+  - n번째 요소(Element)
+  - 수식도 가능
+  - .선택자:nth-child(n){}
+
+# 부트스트랩(Bootstrap)
+
+> 프론트엔드 툴킷(도구상자). 디자인을 못하는 개발자들이 주로 사용.  
+> 사이트에서 필요한 코드를 가져와서 쓸 것. 어떤 형태를 지닌 기능인지 대략적으로 살펴볼 것
+
+## 레이아웃
+
+> 표시해야할 사항들  
+> Bootstrap Layout Grid system : Element의 가로길이가 중요하다.
+
+### 그리드 시스템(Grid system)
+
+- 반응형 디자인 : 화면의 크기에 자동으로 반응
+- 기본적으로 가로길이를 `12등분`한다.
+- Element의 개수가
+
+### 컨테이너(Containers)
+
+> 부트스트랩을 적용시키기 위한 환경
+
+- 가장 기본적인 레이아웃 요소
+- 기본 그리드 시스템을 사용할 때 필요: 12등분을 적용하는 요소
+- class="container"
+
+## 폼(Forms)
+
+- `form-control` : 폼에서 가장 중요한 클래스
+  - class="form-control"
+
+## 컴포넌트(Components)
+
+- 버튼은 누르는 Element에는 대부분 적용 가능
+
+Sass,Scss는 제외하고 볼 것
+lg -> 모니터
+mg -> 태블릿
+sm -> 스마트폰
+
+## CDN
+
+> 직접 다운로드없이 링크를 통해 컴퓨터에 부담을 줄여 사용할 수 있게 해준다.
+> 헤드에 모두 넣는것보다 사이트에 써있는 것처럼 헤드와 바디부분에 나눠서 넣는 것이 좋다.
+
+```
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 부트스트랩 css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 팝업을 위한 js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 부트스트랩을 위한 js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 위에 순서가 꼬이지 않도록 주의. 인식이 안되는 경우가 발생 -->
+  </head>
+```
+
+- row추가
+- column으로 row에 들어갈 엘리멘트 개수를 지정
+
+### 클래스 속성값
+
+- mt-5 : empty top
+- text-center
+- for : 연결되어있는 곳을 표시
+- form 태그
+  - input 등 서버에 입력을 위한 형태를 갖추기 위한 태그
+  - form-group
+    - label과 input태그를 연결시켜 레이아웃에 기본값에 잘 나타나도록 돕는다.
+
+```bash
+<body>
+    <!-- 부트스트랩의 그리드 시스템을 사용하기 위해서는 container가 필요하다 -->
+    <div class="container">
+      <!-- row 만들기 -->
+      <div class="row mt-5">
+        <!-- 가로길이 총 12개의 그리드 사용 -->
+        <div class="col-12 text-center">
+          <h1>로그인</h1>
+        </div>
+        <!-- <div class="col-6">반갑습니다</div> -->
+      </div>
+
+      <!-- 로그인 row -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <form>
+            <div class="form-group">
+              <label for="user_id">아이디</label>
+              <!-- 입력창은 기본적으로 클래스에 form-control 넣을 것 -->
+              <input
+                type="text"
+                class="form-control"
+                placeholder="로그인할 아이디 입력"
+                id="user_id"
+              />
+            </div>
+            <div class="form-group mt-5">
+              <label for="user_password">비밀번호</label>
+              <input
+                type="password"
+                class="form-control"
+                id="user_password"
+                placeholder="비밀번호를 입력하세요"
+              />
+            </div>
+            <input type="submit" value="로그인" class="btn btn-danger" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+```
+
+- 하나의 row 태그 내에 들어갈 엘리먼트의 개수는 col-n을 통해 조절할 수 있으며, row태그 내에 자식의 개수를 통해 엘리먼트를 확정시킬 수 있다.
