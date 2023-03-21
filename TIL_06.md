@@ -411,3 +411,226 @@ sm -> 스마트폰
 ```
 
 - 하나의 row 태그 내에 들어갈 엘리먼트의 개수는 col-n을 통해 조절할 수 있으며, row태그 내에 자식의 개수를 통해 엘리먼트를 확정시킬 수 있다.
+
+# DJANGO
+
+> 2023.03.21 (화)
+
+## 프레임워크(Framework)란?
+
+## Django 설치하기
+
+### 01. 가상환경 설정
+
+- 전역설치
+  - 모든 파이썬 project에서 사용
+- 지역설치
+  - project별 패키지 설치
+- pip3 install virtualenv
+- conda create -n `django-env`
+
+- virtualenv venv
+
+- source activate venv/bin/activate
+- conda activate django-env
+
+Django 설치
+
+- conda install django==2.1.7
+  (pip3 install django==2.1.7)
+- environment location: /Users/seojeongsik/opt/anaconda3/envs/django-env
+
+Django 프로젝트 만들기
+
+> 프로젝트는 웹서비스의 전체적인 환경을 관리하고,App은 소규모단위를 이용해 프로젝트를 구성한다.
+
+- django-admin startproject my_communuty
+- cd my_community
+
+Django 서버 실행하기
+
+- python manage.py runserver
+- ip주소를 대체할 수 있는 도메인
+  - port: (ex.8000)
+  - 로컬호스트: 내컴퓨터 주소 (ex.127.0.0.1)
+
+## MTV 이해하기
+
+> Django프레임워크의 뼈대는 MTV라는 구조로 이뤄졌다. MTV는 Model, Template, View를 의미한다
+
+### 01.Model
+
+> 데이터의 표현을 의미한다.웹 애플리케이션에서 사용할 데이터의 모양
+
+- 데이터들은 데이터베이스에 명세&관리(CRUD) 작업이 일어날 수 있다.
+- UserModel로 객체를 만들면 관리가능한 Data가 된다.
+- 파이썬 객체를 활용하여 쿼리없이 객체를 관리할 수 있도록 돕는다.
+  - save() -> insert
+  - get() -> select
+  - 프로그래밍 언어를 sql로 전환
+- ORM
+
+```bash
+class UserModel(models.Model):
+		# Field 정의
+    username=models.CharField(max_length=32, verbose_name='사용자명')
+    password=models.CharField(max_length=32, verbose_name='비밀번호')
+    registered_dttm = models.DateTimeField(auto_now_add=True, verbose_name='등록시간')
+
+		# 메타데이터 정의
+    class Meta:
+        db_table = 'tb_users'
+```
+
+### 02. View
+
+> 사용자의 요청을 처리하고 결과를 반환시키기 위한 로직을 담당
+
+- MTV MVC
+- View = Controller
+- client의 리퀘스트를 view가 받고 model을 거쳐 DB에 전달
+
+### 03.Template
+
+> 클라이언트가 볼 화면
+> Response
+
+- Data
+  - Json
+  - XML
+- Page
+  - HTML
+  - CSS
+  - JS
+
+## 게시판 프로젝트 - 회원가입
+
+### 01. Django Start App
+
+- MSA(Micro Service architecture)
+
+  - App은 프로젝트를 구성하는 하나의 모듈
+  - `django-admin startapp user`
+  - 객체
+
+- 프로젝트앱
+
+  - 프로젝트와 동일한 이름을 가진 App객체
+  - 전체적인 관리를 하는 App
+
+- 개발순서
+  - 반드시 모델부터 개발할 것!
+    - view, template는 순서 상관없음
+
+### 02. App 등록하기
+
+- 프로젝트앱에 `settings.py`을 통해 등록
+  - settings.py는 프로젝트에 대한 설정이 들어간다.
+  - INSTALLED_APPS리스트에 등록시킬 App의 이름을 문자열로 적는다.
+
+### 03. 회원가입 화면 구현하기
+
+#### 01. Model 구현
+
+> 기능에 사용할 데이터를 먼저 생각하기
+
+- models.py
+
+  - models.Model : 클래스를 상속. 멤버변수를 이용해 테이블의 컬럼을 정의
+    - 멤버변수가 컬럼이 된다
+    - 클래스명이 테이블명이 된다.
+  - models.CharField : 문자열 형태의 필드를 생성
+  - max_length,verbose_name
+  - models.DateTimeField : 년일월시간을 나타낼 때 사용하는 타입
+    - auto_now_add : 현재시간으로 데이터가 추가
+
+  #### 02. 모델변경 사항 적용하기(Migration)
+
+  > 무중단 서비스. 마이그레이션을 통해 가능, 에러를 피하기 위해 사용. 모델이 바뀌면 마이그레이션 작업 필요
+
+  1. 모델 변경 정보 생성
+
+  - python manage.py makemigrations
+
+  2. 모델 변경 사항 적용
+
+  - python manage.py migrate
+
+  #### 03. django admin 사용하기
+
+  > 웹사이트 전체의 데이터를 관리하기 위한 도구.
+
+- python manage.py createsuperuser
+- python manage.py runserver
+- 127.0.0.1:8000/admin
+
+  #### 04. Admin과 Model 이어주기
+
+  - /user/admin.py
+
+  ```bash
+  from django.contrib import admin
+  from .models import User
+
+  # Register your models here.
+  class UserAdmin(admin.ModelAdmin):
+    pass
+
+  admin.site.register(User, UserAdmin)
+  ```
+
+  - _Back Office_
+  - _관리자 정보_
+
+### _관례\_python_
+
+- 변수명, 함수명
+  - 스네이크 케이스
+  - 소문자,언더바
+  - ex.student_name
+- 클래스명
+  - 파스칼 케이스
+  - 첫글자 대문자, 이어지는 글자 대문자
+  - ex. StudentName
+- studentName
+  - Java
+  - cannel case
+- student-name
+  - HTML, CSS
+  - kebab case
+
+#### 04. Meta 클래스 구현하기
+
+> 기본적으로 모델의 클래스 이름이 테이블의 이름이 된다. 이 때 클래스 이름이 아닌 데이터베이스의 특정 테이블과 모델을 연결하고 싶다면 Meta클래스를 사용한다.
+
+- Meta클래스는 모델클래스의 `내부클래스`로 구성된다
+
+  - 테이블의 이름을 붙일 때 변수명
+    - tb_user
+    - tbl_user
+
+  ALTER
+
+- 메타데이터변경
+
+  CREATE
+
+- 테이블 생성
+
+_\_\_str\_\_은 정보의 변경이 아니어서 migration은 필요하지않다._
+
+_마이그레이션을 할 때는 서버를 잠시 끊었다하기(ctrl + c)_
+
+class
+인스턴스:실체화
+오브젝트:개념적
+접근연산자: .
+
+메소드는 수정이 아닌 호출을 위한 것 . static=클래스=메소드에 하나 존재
+멤버변수는 각 객체마다 존재
+
+상속은 확장
+오버라이딩: 1. 부모에서 추상적인 개념이 자식에서 구체화되는 것 2. 수정하는 것
+super() : 부모
+argument: 인자
+parameter: 매개변수
