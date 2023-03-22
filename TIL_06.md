@@ -440,7 +440,7 @@ Django 설치
   (pip3 install django==2.1.7)
 - environment location: /Users/seojeongsik/opt/anaconda3/envs/django-env
 
-Django 프로젝트 만들기
+Django `프로젝트 만들기`
 
 > 프로젝트는 웹서비스의 전체적인 환경을 관리하고,App은 소규모단위를 이용해 프로젝트를 구성한다.
 
@@ -621,6 +621,7 @@ _\_\_str\_\_은 정보의 변경이 아니어서 migration은 필요하지않다
 
 _마이그레이션을 할 때는 서버를 잠시 끊었다하기(ctrl + c)_
 
+```
 class
 인스턴스:실체화
 오브젝트:개념적
@@ -634,3 +635,108 @@ class
 super() : 부모
 argument: 인자
 parameter: 매개변수
+```
+
+> 23.03.22 (수)
+> 작업 시작시 activate와 해당 프로젝트로 이동(cd)
+
+app : 동작가능한 서비스(독립적인 작은 서비스)
+서버
+Response:
+-data
+-page
+
+#### template
+
+- ui를 만들기 전에는 그림을 그려볼 것
+- form
+  - action : 어디로 데이터를 보낼 것인가.(url)
+    - action="."은 현재 띄워진 url을 그대로 사용
+  - method : 어떤 방식으로 데이터를 보낼 것인가.
+    - Parameter : 클라이언트가 서버에게 보내는 데이터
+      - Get : 가지고 오는 것 = SELECT
+        - parameter를 `URL`에 실어서 보낸다.
+          1. 일반적으로 Query String을 활용
+          2. path parameter
+        - 가볍고 빠르지만 보안에 취약하다. 많은 값을 전달하기 힘들다. 텍스트 데이터만 전달 가능.
+      - Post : 데이터 등록 = INSERT
+        - parameter를 `BODY`에 실어서 보낸다.
+          - body : 객체 내에 데이터를 실을 수 있는 곳.
+          - 무겁고 느리지만 보안에 취약x. 큰 데이터 전송가능. 다양한 데이터를 전송 가능
+      - 절대적인 것은 아님
+
+※ Get 방식
+www.naver.com/webtoon/wed`?num=1&date=20230322` : URL + QueryString
+
+- 김밥주세요? 몇개=1개
+  www.naver.com/webtoon/wed`/1/20230322` : URL + PathParameter
+- API 만들 때 자주 사용
+
+※
+
+- URI : `http://`www.naver.com/ -> scheme(스킴), 스킴을 포함한 전부
+- ★URL : HOST(도메인 With port{80}) + Path -> `naver.com/~/~..` , 스킴만 빠진 것
+- URN : Path -> /webtoon/wed/...
+- Protocol : 규약. 인터넷을 어떤 규약으로 사용할 것인가?
+  - HTTP(HyperText Transfer Protocol)
+  - HTTPS( " Secure)
+  - FTP(File Transfer Protocol)
+- `http://`www.naver.com/webtoon/wed : 스킴 + 호스트 + path ?쿼리스트링을 통한 정확한 정보
+- URN은 API로 대체하여 사용한다.
+  - API는 메뉴판 같은 존재
+
+# view
+
+- 화면을 띄울 수 있는 `코드`를 response해준다.
+- 렌더링할 때 templates를 우선시 하기에 디렉토리 파일을 적을 필요없다
+- FBV
+- render : 화면을 보여주는 함수
+  API
+- 클라이언트가 요청할 수 있는 URL을 모아놓은 것
+  - Application : 프로그램
+  - Programming : 제어
+  - Interface : 창구
+
+urls.py
+
+- 메인프로젝트 앱의 urls.py는 API , 메뉴판이며 메인프로젝트앱의 메뉴들은 각 앱들을 뜻한다.
+- 프로젝트 앱에 urls.py를 지나고 앱에 urls.py를 간다.
+- urlpatterns : 이 변수명은 고정
+  - url 등록
+- include('user.urls') : user App에 있는 urls.py에 urlpatterns에 등록 되어 있는 모든 url을 한꺼번에 포함시켜주는 기능
+- www.naver.com/news
+- / 까지 메인프로젝트의 home
+
+- model에 새로운 데이터콜럼을 추가하면 마이그레이션 작업에서 기존에 있던 데이터들을 어떻게 처리할지 묻는다.
+
+---
+
+- post
+
+  - 데이터를 생성하고 싶을 때 사용하는 방식
+
+- form의 기본 방식은 get이다.
+
+- 회원가입 기능을 구현
+  1. 회원 가입 화면 url
+     - html 파일 보기
+     - GET /user/register/
+  2. 회원 등록 기능 url
+     - 값을 다 입력한 다음 서버에게 보내는 url
+     - POST /user/register/
+- action=get or post로 동일한 url이 어떤 기능을 할지 구별한다.
+
+- action="."은 현재 띄워진 url을 그대로 사용
+
+views.py에서 기능을 구현(get과 post 구분)
+
+register.html에서 작성한 name 속성은 클라이언트가 보낸 데이터가 무엇인지 서버가 알 수 있도록하는 키값이다.
+
+※
+오류가 났을 시 아래에서 위로 살펴볼 것. 내가 만든 코드를 살펴볼 것. 오류 문자를 현재 사용하고 있는 프로그램 이름과 함께 작성해서 물어볼 것.
+
+CSRF 토큰 : 랜덤하게 암호화 된 16진수 정수
+
+- 디도스 방지
+- Register.html에서 form내부에 작성해야한다.
+  - {% csrf_token %}
