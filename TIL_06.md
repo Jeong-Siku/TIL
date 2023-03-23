@@ -740,3 +740,112 @@ CSRF 토큰 : 랜덤하게 암호화 된 16진수 정수
 - 디도스 방지
 - Register.html에서 form내부에 작성해야한다.
   - {% csrf_token %}
+
+> 23.03.23 (목)
+
+> admin을 통해 관리자페이지에 기능 추가
+
+- list_display
+
+※ **중요**
+
+1. 설계
+   - 어떤 data를 사용할 것인가?
+     - 머신러닝,분석
+     - data가 어떤건지
+   - 코드 작성부터 한다면 잘못된 것
+2. Data IO(Input Output)가 잘되는지 확인
+3. 재설계
+   - 이 데이터를 이용해서 어떻게 구현할까를 고민
+     - 알고리즘/비즈니스로직
+
+request.POST가 빈값이면 에러가 발생한다
+request.POST.get을 사용하면 에러메세지를 반환하지 않고 name 변수값을 반환
+
+parameter : 클라이언트가 서버에게 보낸 값
+attribute : 서버가 클라이언트에게 `보여줄` 데이터 ex.res_data
+attribute와 같이 전달되는 데이터는 `전달될` 데이터
+
+request = 비즈니스로직 : 사용자가 보낸 데이터를 바탕으로 도출하는 것
+
+if와 elif의 순서를 바꿨을 때 어떤 문제가 발생할까?
+
+view에서 attribute와 template를 합쳐서 전달한다.
+
+- template + attribute = View Resolver , Template engine
+
+※표현식
+
+- Template engine은 `표현식`을 통해 HTML에서 파이썬모드 사용을 가능하도록 기능을 제공한다.
+  - `{{ }}` : Expression Block -> 표현식 블록(출력을 담당, python코드를 HTML로 변환.단, 무조건 변수에 들어있는 값을 변환한다.)
+  - `{% %}` : Syntax Block -> 문법 블록(파이썬)
+
+복호화 암호화
+
+- Hash, SHA
+- 복호화가 안된다 : 확인하는 비밀번호도 암호화하여 체크
+- 알고리즘 고정화 : 비밀번호들의 암호화 과정에서 필요한 규칙을 고정하기 위해
+- view에서 해당 기능 import
+
+조회하기
+
+- check_password
+
+★Session : 서버가 클라이언트의 정보를 저장하는 공간
+
+- 세션에 정보가 없다면 로그인하지않았다고 판단함
+  1. 브라우저 종료
+  2. 시간제한
+- 로그인을 하는 순간 공간이 발생
+
+cookie
+
+- 클라이언트의 공간 : 브라우저에서 활동하는 기록들을 기입
+- 서버에는 존재하지않음
+- 서버마다 다르게 인식
+- JWT
+- Oauth 2
+
+개발자툴-application-cookie
+
+redirect
+
+- 클라이언트를 해당 url로 이동시킨다.
+  render
+- 화면을 띄워준다.
+
+pk=id
+
+try
+except
+
+---
+
+# 템플릿 상속
+
+## 1. 공통 부분 분리
+
+책과 수업의 구성이 다르다. 해볼 것
+
+- 프로젝트앱에 구성
+- user앱에 구성
+  - {% block contents %}
+  - {% endblock %}
+
+# Django Form
+
+- forms.py
+
+## 커스터마이징
+
+- {% %}
+- id_for_label : id 속성값
+
+  - id 값 -> id_password , id_user_id
+  - input_type : text,password.email
+  - field.name : form 클래스의 변수명
+  - field.label은 forms.py에서 수정 가능
+
+- .is_valid() : 유효성 검증
+- clean : 오버라이딩을 통해 검증내용을 추가
+- required : 필수적인 부분에 입력
