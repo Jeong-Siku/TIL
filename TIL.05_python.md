@@ -481,4 +481,32 @@ while <조건문>:
 
 - \+ 연산자
 - str.join(seq)
-  p.183
+
+### 4. 문자열 찾기
+
+- str.find(search_str, start, end)
+- str.count(search_str, start, end)
+- str.startswith(prefix, start, end) : bool
+- str.endswith(suffix, start, end) : bool
+
+### 5. 문자열 바꾸기
+
+- str.replace(old, new\[,count])
+
+### 6.문자열의 구성 확인하기
+
+bool
+
+- str.isalpha()
+- str.isdigit()
+- str.isalnum()
+- str.isspace()
+- str.isupper()
+- str.islower()
+
+### 7. 대소문자로 변경하기
+
+- str.lower()
+- str.upper()
+
+## 2. 텍스트 파일의 데이터를 읽고 처리하기
