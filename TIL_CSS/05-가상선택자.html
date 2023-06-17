@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 가상 선택자 : 있을 수도 있고, 없을 수도 있는데, 있으면 선택 -->
+    <style>
+      /* not selector  */
+      /* 선택자1:not(선택자2) */
+      /* 선택자1 중에 선택자 2가 "아닌 것" */
+      .cs1:not(.cs2) {
+        color: pink;
+      }
+
+      /* nth-child */
+      /* n: 숫자 */
+      /* n번째 요소(Element) */
+      .cs1:nth-child(3) {
+        background-color: skyblue;
+      }
+      /* 짝수번째, 홀수번째 - 수식도 가능 */
+      .cs1:nth-child(2n) {
+        color: red;
+      }
+      .cs1:nth-child(2n-1) {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="cs1 cs2">Hello 1</p>
+    <p class="cs1 cs2">Hello 2</p>
+    <p class="cs1 cs3">Hello 3</p>
+    <p class="cs1 cs4">Hello 4</p>
+    <p class="cs1 cs2">Hello 5</p>
+  </body>
+</html>
