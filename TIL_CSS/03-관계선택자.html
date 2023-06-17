@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 부모, 형제, 자식, 자손 -->
+    <!-- css는 부모, 형제는 사용하지않는다. -->
+    <style>
+      /* ★✭★자식 선택자(부모 > 자식) */
+      div.wrap-1 > .tit {
+        color: red;
+      }
+      /* 자손 선택자(부모 자손): 전부 다 가져온다. */
+      .wrap-1 .tit {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div.wrap-1 , 기준-->
+    <div class="wrap-1">
+      <h3 class="tit">inner 1</h3>
+      <div class="wrap-2">
+        <h4 class="tit">inner 2</h4>
+      </div>
+    </div>
+  </body>
+</html>
