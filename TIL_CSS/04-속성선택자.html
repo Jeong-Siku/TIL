@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 속성 선택자(attribute selector) -->
+    <!-- [속성명="속성값"] -->
+    <!-- 일반적으로는 태그명을 앞에 붙여서 사용 -->
+    <!-- 태그명[속성명="속성값"] -->
+    <style>
+      /* type 속성이 text인 엘리먼트 선택 */
+      [type="text"] {
+        background-color: red;
+      }
+      input[type="password"] {
+        background-color: blue;
+      }
+      /* [class="cs3"]{} */
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="아이디를 입력하세요" />
+    <input type="password" placeholder="비밀번호를 입력하세요" />
+    <input type="email" class="cs3" placeholder="이메일을 입력하세요" />
+    <input type="tel" placeholder="전화번호를 입력하세요" />
+  </body>
+</html>
