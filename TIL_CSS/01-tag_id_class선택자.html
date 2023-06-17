@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- style sheet는 head에서 작업 -->
+    <style>
+      /* 태그 선택자 */
+      div {
+        color: red;
+      }
+      p {
+        background-color: pink;
+      }
+      span {
+        color: skyblue;
+        background-color: black;
+      }
+
+      /* 아이디 선택자(#) */
+      #main {
+        color: darkkhaki;
+        background-color: black;
+      }
+
+      /* 클래스 선택자(.) */
+      .p_1 {
+        color: tomato;
+        background-color: transparent;
+      }
+
+      .p_2 {
+        font-style: italic;
+      }
+
+      /* 여러 클래스를 동시에 선택 */
+      .p_1.p_2 {
+        background-color: black;
+      }
+
+      /* p태그 중 p_1 클래스만 선택 */
+      p.p_1:hover {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <!-- 선택자(selector) : 엘리먼트를 선택하기 위한 방법 -->
+  <!-- id를 이용해서 선택 : id선택자(#), getElementById -->
+  <!-- class를 이용해서 선택 : class 선택자(.), getElements -->
+  <!-- tag 명을 이용해서 선택 : tag 선택자(태그 이름), getElementsByTag -->
+  <body>
+    <div>Hello</div>
+    <p>Greeting</p>
+    <span>hihi</span>
+    <p>Bye</p>
+
+    <div id="main">안녕하세요!</div>
+
+    <p class="p_1">반갑습니다</p>
+    <p class="p_1">안녕히 가세요</p>
+    <div class="p_1 p_2">아무거나 입력</div>
+
+    <a href="#" class="p_2">여기는 앵커태그</a>
+  </body>
+</html>
