@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form : 웹 서버에 사용자가 입력한 내용을 제출하기 위한 태그 -->
+    <!-- form 내에 다른 form이 올 수는 없다. -->
+
+    <!-- action : 입력된 데이터를 전달할 서버의 URL -->
+    <!-- method : 서버로 전송할 HTTP 방식(get, post 등) -->
+    <form action="#">
+      <!-- input : 사용자로부터 입력을 받기 위한 태그 -->
+      <input type="text" placeholder="이름을 입력하시오" />
+      <input type="password" placeholder="비밀번호를 입력하세요" />
+      <input type="email" placeholder="이메일을 입력하세요" />
+      <input type="tel" placeholder="전화번호를 입력하세요" />
+      <!-- textarea : 여러 줄을 입력할 수 있는 태그 -->
+      <textarea name="게시판" id="" cols="30" rows="10"></textarea>
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+
+      <!-- name 속성 : 서버가 클라이언트에게 데이터를 받을 때 키값으로 사용! -->
+      남자 <input type="radio" name="gender" /> 여자
+      <input type="radio" name="gender" />
+
+      <!-- type="file" : 파일 업로드 할 때 사용 -->
+      <input type="file" />
+
+      <!-- type="submit" : 서버에게 데이터를 전달할 때 사용 -->
+      <input type="submit" value="보내기" />
+    </form>
+  </body>
+</html>
