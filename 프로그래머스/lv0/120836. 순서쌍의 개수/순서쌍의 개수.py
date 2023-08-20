@@ -4,3 +4,6 @@ def solution(n):
         if n%i==0:
             answer+=1
     return answer
+
+def solution(n):
+    return len(list(filter(lambda x : n%(x+1)==0,range(n))))
