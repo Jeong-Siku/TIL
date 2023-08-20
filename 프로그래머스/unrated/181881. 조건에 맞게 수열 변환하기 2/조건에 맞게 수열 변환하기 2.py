@@ -11,3 +11,20 @@ def solution(arr):
         arr_list.append(a.copy())
         if arr_list[-1] == arr_list[-2]:
             return j
+        
+def solution(arr):
+    old=arr
+    cnt = 0
+    while True:
+        new = []
+        for i in old:
+            if i >=50 and i%2==0:
+                i = i/2
+            elif i <50 and i%2==1:
+                i = i*2+1
+            new.append(i)
+        if old==new:
+            return cnt
+        else:
+            old=new
+            cnt+=1
