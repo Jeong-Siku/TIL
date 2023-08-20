@@ -10,3 +10,11 @@ def solution(emergency):
             if grade[j][0] == i:
                 answer.append(grade[j][1])
     return answer
+
+def solution(emergency):
+    a = {l:i+1 for i,l in enumerate(sorted(emergency,reverse=True))}
+    
+    answer = []
+    for i in emergency:
+        answer.append(a[i])
+    return answer
