@@ -17,3 +17,14 @@ def solution(wallpaper):
     rdx,rdy = x_idx[-1]+1,y_idx[-1]+1
     
     return luy,lux,rdy,rdx
+
+def solution(wallpaper):
+    x_idx = []
+    y_idx = []
+    for y,i in enumerate(wallpaper):
+        for x,j in enumerate(i):
+            if j=="#":
+                x_idx.append(x)
+                y_idx.append(y)
+    
+    return [min(y_idx),min(x_idx),max(y_idx)+1,max(x_idx)+1]
