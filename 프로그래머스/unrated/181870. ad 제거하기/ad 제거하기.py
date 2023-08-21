@@ -5,3 +5,6 @@ def solution(strArr):
             continue
         answer.append(i)
     return answer
+
+def solution(strArr):
+    return [i for i in strArr if "ad" not in i]
