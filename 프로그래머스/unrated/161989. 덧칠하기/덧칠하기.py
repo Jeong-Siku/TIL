@@ -14,3 +14,15 @@ def solution(n, m, section):
             cnt+=1
 
     return cnt
+
+def solution(n, m, section):
+    answer = 1
+    
+    prev = section[0]
+    for sec in section:
+        if sec-prev<m:
+            pass
+        elif sec-prev >=m:
+            answer+=1
+            prev= sec
+    return answer 
