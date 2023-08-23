@@ -6,3 +6,6 @@ def solution(myString, pat):
     a=a.replace("C","B")
     a=a.replace("D","A")
     return int(pat in a)
+
+def solution(myString,pat):
+    return int("".join("B" if i=="A" else "A" for i in pat) in myString)
