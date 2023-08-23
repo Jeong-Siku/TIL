@@ -1,2 +1,14 @@
 def solution(binomial):
     return eval(binomial)
+
+def solution(binomial):
+    a,op,b = binomial.split()
+    a = int(a)
+    b = int(b)
+    if "+" == op:
+        result= a+b
+    elif "-" == op:
+        result= a-b
+    else:
+        result = a*b
+    return result
