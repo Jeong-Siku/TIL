@@ -6,3 +6,9 @@ def solution(my_string):
         else:
             answer+=i.upper()
     return answer
+
+def solution(my_string):
+    return "".join(i.lower() if i.isupper() else i.upper() for i in my_string)
+
+def solution(my_string):
+    return my_string.swapcase()
