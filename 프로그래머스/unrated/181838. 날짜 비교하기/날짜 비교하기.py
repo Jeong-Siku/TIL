@@ -9,3 +9,6 @@ def solution(date1, date2):
         return 1
     else:
         return 0
+    
+def solution(date1, date2):
+    return int(date1<date2)
