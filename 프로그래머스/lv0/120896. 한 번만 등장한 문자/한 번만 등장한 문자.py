@@ -6,3 +6,6 @@ def solution(s):
         if dict[i]==1:
             answer+=i
     return "".join(sorted(answer))
+
+def solution(s):
+    return "".join(sorted(i for i in s if s.count(i) ==1))
