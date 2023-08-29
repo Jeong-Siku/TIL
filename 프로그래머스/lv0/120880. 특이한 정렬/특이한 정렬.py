@@ -10,3 +10,6 @@ def solution(numlist, n):
     ordered_dic = sorted(dic.items(),key=lambda x:(x[1],-x[0]))
     
     return [i for i,a in ordered_dic]
+
+def solution(numlist, n):
+    return sorted(numlist,key=lambda x : (abs(x-n),n-x))
