@@ -19,3 +19,8 @@ def solution(score):
         num+=1
         
     return [b for a,b in sorted(zip(sorted_result,rank),key=lambda x: x[0][0])]
+
+def solution(score):
+    # 랭킹은 인덱스로 구할 수 있다.
+    a= sorted([sum(i) for i in score],reverse=True)
+    return [a.index(sum(i))+1 for i in score]
