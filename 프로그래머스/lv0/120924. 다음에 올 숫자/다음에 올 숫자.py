@@ -1,6 +1,6 @@
 def solution(common):
-    q,w,e= common[-3],common[-2],common[-1]
-    if e-w==w-q:
-        return e+w-q
+    a,b,c=common[:3] 
+    if c-b==b-a:
+        return common[-1]+(b-a)
     else:
-        return e+(e-w)*(e-w)//(w-q)
+        return common[-1]*(b//a)
