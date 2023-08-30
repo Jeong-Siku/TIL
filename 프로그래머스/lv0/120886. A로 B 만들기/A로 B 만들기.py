@@ -10,3 +10,9 @@ def solution(before, after):
         if after.count(i) !=dic[i]:
             return 0
     return 1
+
+def solution(before, after):
+    # 순서 = 정렬
+    if sorted(before) == sorted(after):
+        return 1
+    return 0
