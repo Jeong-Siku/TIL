@@ -10,3 +10,12 @@ def solution(number):
                 if number[i]+number[j]+number[k]==0:
                     answer+=1
     return answer
+
+from itertools import combinations
+def solution(number):
+    # 배열
+    answer=0
+    for i in combinations(number,3):
+        if sum(i) == 0:
+            answer+=1
+    return answer
