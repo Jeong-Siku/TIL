@@ -7,5 +7,7 @@ def solution(n):
     result=0
     for idx,num in enumerate(answer):
         result+=answer[::-1][idx]*(3**idx)
+    
+    # int(num,진수)
         
     return result
