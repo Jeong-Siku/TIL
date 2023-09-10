@@ -27,3 +27,18 @@ def solution(dartResult):
             score_list[-1] = score_list[-1]*(-1)
         
     return sum(score_list)
+
+import re
+def solution(dartResult):
+    score = {"S":1,"D":2,"T":3}
+    bonus = {"*":2,"#":-1,"":1}
+    
+    gram = re.compile("(\d+)([SDT])([*#]?)")
+    dart = gram.findall(dartResult)
+    print(dart)
+    result = [0]
+    for idx, i in enumerate(dart):
+        if i[2] == "*":
+            result[-1] *=2 
+        result.append(int(i[0])**score[i[1]]*bonus[i[2]])
+    return sum(result)
