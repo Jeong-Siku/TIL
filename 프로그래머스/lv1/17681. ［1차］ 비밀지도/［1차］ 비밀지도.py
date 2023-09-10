@@ -23,3 +23,12 @@ def solution(n, arr1, arr2):
                 result+=" "
         final_map.append(result)
     return final_map
+
+# 비트연산자
+def solution(n, arr1, arr2):
+    map_0 = [bin(i|j)[2:] for i,j in zip(arr1,arr2)]
+    for idx , i in enumerate(map_0):
+        if len(i)<n:
+            map_0[idx] = "0"*(n-len(i)) + i
+        map_0[idx] = "".join("#" if i=="1" else " " for i in map_0[idx])
+    return map_0
