@@ -6,3 +6,9 @@ def solution(n):
         else:
             answer+="박"
     return answer
+
+def solution(n):
+    return "".join("박" if i%2 else "수" for i in range(n))
+
+def solution(n):
+    return "수박"*(n//2) + "수"*(n%2)
