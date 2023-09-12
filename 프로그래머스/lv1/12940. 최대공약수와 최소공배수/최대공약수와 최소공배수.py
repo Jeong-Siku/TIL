@@ -20,3 +20,14 @@ def solution(n, m):
             
     
     return max_div,(n//max_div)*(m//max_div)*max_div
+
+# 유클리드 호제법
+def solution(n, m):
+    c,d=max(n,m) , min(n,m)
+    t=1
+    while t!=0:
+        t=c%d
+        c,d = d,t
+        # 두개의 값을 나눈 나머지를 계속 반복하여 나머지가 0이면 마지막 나눈 값이 최대공배수
+        # 최소공배수는 두개의 값을 곱한뒤 최대공약수로 나눈 값
+    return c, n*m//c
