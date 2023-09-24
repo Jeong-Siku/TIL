@@ -1,9 +1,10 @@
 -- 코드를 입력하세요
 SELECT ANIMAL_TYPE, 
-    CASE
-        WHEN NAME is null THEN "No name"
-        ELSE NAME
-    END as NAME, 
+    # CASE
+    #     WHEN NAME is null THEN "No name"
+    #     ELSE NAME
+    # END as NAME, 
+    ifnull(name,"No name") NAME,
     SEX_UPON_INTAKE
 FROM ANIMAL_INS
 ORDER BY ANIMAL_ID
