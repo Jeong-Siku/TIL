@@ -1,0 +1,11 @@
+-- 코드를 입력하세요
+SELECT FLAVOR
+FROM (
+    SELECT *
+    FROM FIRST_HALF H
+    UNION
+    SELECT *
+    FROM JULY J) a
+GROUP BY FLAVOR
+ORDER BY sum(TOTAL_ORDER) DESC
+limit 3
