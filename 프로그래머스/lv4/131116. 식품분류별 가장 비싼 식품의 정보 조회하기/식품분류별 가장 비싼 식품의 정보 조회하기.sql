@@ -1,0 +1,18 @@
+-- 코드를 입력하세요
+# product_name을 제대로 가져오지 못한다.
+SELECT CATEGORY, max(PRICE) MAX_PRICE, PRODUCT_NAME
+FROM FOOD_PRODUCT
+WHERE CATEGORY in ("과자","국","김치","식용유")
+GROUP BY CATEGORY
+order by PRICE desc;
+
+SELECT CATEGORY,price MAX_PRICE,PRODUCT_NAME
+FROM FOOD_PRODUCT
+WHERE (CATEGORY,price) in (
+    SELECT CATEGORY, max(PRICE) MAX_PRICE
+    FROM FOOD_PRODUCT
+    WHERE CATEGORY in ("과자","국","김치","식용유")
+    GROUP BY CATEGORY
+    )
+ORDER BY MAX_PRICE desc;
+
