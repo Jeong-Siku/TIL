@@ -20,6 +20,7 @@ TIL_실습/자전거_수요예측.ipynb
 국회보도자료api.ipynb
 백준문제풀이.ipynb
 study_pandas,시각화,numpy.ipynb
+<<<<<<< Updated upstream
 =======
 TIL_CSS/CSS 기초.png
 TIL_HTML/짱구와 친구들.jpg
@@ -72,12 +73,20 @@ TIL_딥러닝/NLP_업데이트/topics.zip
 TIL_딥러닝/NLP_업데이트/RNN/chatbot_data.csv
 TIL_머신러닝/06. 결정 트리.ipynb
 TIL_머신러닝/12. 선형회귀모델.ipynb
+=======
+TIL_머신러닝/실습용 데이터/diabetes.csv
+TIL_머신러닝/실습용 데이터/train_bike.csv
+TIL_머신러닝/실습용 데이터/train_house.csv
+TIL_머신러닝/실습용 데이터/train_santander.csv
+TIL_머신러닝/실습용 데이터/train_titanic.csv
+>>>>>>> Stashed changes
 TIL_머신러닝/human_activity/activity_labels.txt
 TIL_머신러닝/human_activity/features.txt
 TIL_머신러닝/human_activity/test/X_test.txt
 TIL_머신러닝/human_activity/test/y_test.txt
 TIL_머신러닝/human_activity/train/X_train.txt
 TIL_머신러닝/human_activity/train/y_train.txt
+<<<<<<< Updated upstream
 TIL_머신러닝/실습용 데이터/diabetes.csv
 TIL_머신러닝/실습용 데이터/train_bike.csv
 TIL_머신러닝/실습용 데이터/train_house.csv
@@ -87,10 +96,24 @@ TIL_스파크/04-문제풀기.ipynb
 TIL_스파크/데이터 엔지니어링.md
 TIL_스파크/data.zip
 TIL_스파크/Kafka.md
+=======
+TIL_딥러닝/NLP_업데이트/topics.zip
+TIL_딥러닝/NLP_업데이트/[실습 과제] 한국어 리뷰 데이터 워드클라우드 시각화
+TIL_딥러닝/NLP_업데이트/01. Text Preprocessing의 사본
+TIL_딥러닝/NLP_업데이트/02. Text Tokenization, Integer Encoding의 사본
+TIL_딥러닝/NLP_업데이트/03. Text Vectorization의 사본
+TIL_딥러닝/NLP_업데이트/04. Text Mining - WordCloud의 사본
+TIL_딥러닝/NLP_업데이트/05. Text Mining - Topic Modeling의 사본
+TIL_딥러닝/NLP_업데이트/06. Text Mining - Document Clustering, Document Similarity의 사본
+TIL_딥러닝/NLP_업데이트/RNN/chatbot_data.csv
+.gitignore
+TIL_스파크/data.zip
+>>>>>>> Stashed changes
 TIL_스파크/RDD 실습 1. 영화 별점 카운트.ipynb
 TIL_스파크/RDD 실습 2. 나이대 별로 몇명의 사람이 있는지 세어보기.ipynb
 TIL_스파크/RDD 실습 3. 최저 온도 찾기.ipynb
 TIL_스파크/RDD 실습 4. 책에 나온 단어 개수 세기(wordcount).ipynb
+<<<<<<< Updated upstream
 TIL_스파크/TIL_카프카/01_consumer.py
 TIL_스파크/TIL_카프카/01_producer.py
 TIL_실습/결정트리 실습_사용자행동인식데이터세트/분류_Grid,보팅,랜덤포레스트실습.ipynb
@@ -109,3 +132,47 @@ TIL_코딩테스트/시뮬레이션과 창의적 해결법.ipynb
 TIL_파이썬/Pandas.ipynb
 TIL_코딩테스트/시뮬레이션과 창의적 해결법.ipynb
 project/문서 군집화_문서간 유사도.ipynb
+=======
+>>>>>>> Stashed changes
+TIL_딥러닝/NLP_업데이트/[실습 과제] 한국어 리뷰 데이터 워드클라우드 시각화
+TIL_딥러닝/NLP_업데이트/RNN/01. 기본 RNN 작동 방식 알아보기
+TIL_딥러닝/NLP_업데이트/RNN/02. 변형된 RNN
+TIL_딥러닝/NLP_업데이트/RNN/03. LSTM을 이용한 텍스트 분류 모델 만들기
+TIL_딥러닝/NLP_업데이트/RNN/04. 1D CNN을 이용한 텍스트 분류 모델 만들기
+TIL_딥러닝/NLP_업데이트/RNN/05. Seq2Seq 기본 구현하기
+TIL_딥러닝/NLP_업데이트/[실습 과제] 한국어 리뷰 데이터 워드클라우드 시각화
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/activity_labels.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/features_info.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/features.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/README.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/subject_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/X_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/y_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/body_acc_x_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/body_acc_y_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/body_acc_z_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/body_gyro_x_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/body_gyro_y_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/body_gyro_z_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/total_acc_x_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/total_acc_y_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/test/Inertial Signals/total_acc_z_test.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/subject_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/X_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/y_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/body_acc_x_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/body_acc_y_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/body_acc_z_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/body_gyro_x_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/body_gyro_y_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/body_gyro_z_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/total_acc_x_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/total_acc_y_train.txt
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/UCI HAR Dataset/train/Inertial Signals/total_acc_z_train.txt
+TIL_실습/자전거_수요예측/bike-sharing-demand/sampleSubmission.csv
+TIL_실습/자전거_수요예측/bike-sharing-demand/test.csv
+TIL_실습/자전거_수요예측/bike-sharing-demand/train.csv
+TIL_실습/타이타닉_생존자예측/gender_submission.csv
+TIL_실습/타이타닉_생존자예측/test.csv
+TIL_실습/타이타닉_생존자예측/train.csv
+TIL_실습/피마_인디언_당뇨병_예측/diabetes.csv
