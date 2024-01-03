@@ -4,6 +4,7 @@ TIL_09_math.md
 UI_UX_특강.md
 TIL_머신러닝.md
 TIL_07_이러닝.md
+<<<<<<< Updated upstream
 study_pandas,시각화,numpy.ipynb
 TIL_딥러닝/NLP/총정리/01. 자연어 처리(NLP).ipynb
 TIL_딥러닝/NLP/총정리/02_02_정제(Cleaning).ipynb
@@ -19,3 +20,92 @@ TIL_실습/자전거_수요예측.ipynb
 국회보도자료api.ipynb
 백준문제풀이.ipynb
 study_pandas,시각화,numpy.ipynb
+=======
+TIL_CSS/CSS 기초.png
+TIL_HTML/짱구와 친구들.jpg
+TIL_스파크/20230615155033.png
+.gitignore
+20230615153935.png
+.vscode/settings.json
+project/다음 블로그_검색.ipynb
+project/다음뉴스_크롤링.ipynb
+Final_project/data/노드별 링크정보_2023 (서울, 경기, 인천).csv.xlsx
+Final_project/data/서울시 표준링크 매핑정보_2023년3월 기준.xlsx
+Final_project/data/서울시버스노선ID정보(20230613).xlsx
+Final_project/data/서울시버스정류소위치정보.xlsx
+Final_project/data/시군구_경제활동인구_총괄(2021-2022).csv
+Final_project/data/시군구별 생활업종 사업체수_기타의료업.csv
+Final_project/data/시군구별 생활업종 사업체수_병원.csv
+Final_project/data/시군구별 생활업종 사업체수_약국.csv
+Final_project/data/시군구별 생활업종 사업체수_한방병원.csv
+Final_project/data/택시_일일사용자.csv
+Final_project/data/통근·통학시_이용하는_교통수단(2021-2022).csv
+Final_project/data/Bus_Num_Passengers.23.06.05-06.11_2.xlsx
+pos_sub.csv
+>>>>>>> Stashed changes
+practice1.ipynb
+pratice.ipynb
+project.ipynb
+Untitled-1.ipynb
+Final_project/mysql_Load.ipynb
+project/NaverNews.csv
+TIL_SQL/sqlalchemy_작성법.py
+pymongo.ipynb
+project/0512 nlp 데이터 분석.ipynb
+project/문서 군집화_문서간 유사도.ipynb
+project/선형회귀_릿지.ipynb
+project/LDA_project .ipynb
+TIL_CSS/07-갤러리만들기.html
+TIL_CSS/선택자연습.html
+TIL_CSS/연습.html
+TIL_HTML/DOM 연습.html
+TIL_딥러닝/Computer Vision/01. CNN을 활용한 MNIST 데이터 세트 분류기 만들기.ipynb
+TIL_딥러닝/Computer Vision/02.Advanced CNN - AlexNet.ipynb
+TIL_딥러닝/NLP/02. Text Vectorization.ipynb
+TIL_딥러닝/NLP_업데이트/01. Text Preprocessing의 사본
+TIL_딥러닝/NLP_업데이트/02. Text Tokenization, Integer Encoding의 사본
+TIL_딥러닝/NLP_업데이트/03. Text Vectorization의 사본
+TIL_딥러닝/NLP_업데이트/04. Text Mining - WordCloud의 사본
+TIL_딥러닝/NLP_업데이트/05. Text Mining - Topic Modeling의 사본
+TIL_딥러닝/NLP_업데이트/06. Text Mining - Document Clustering, Document Similarity의 사본
+TIL_딥러닝/NLP_업데이트/topics.zip
+TIL_딥러닝/NLP_업데이트/RNN/chatbot_data.csv
+TIL_머신러닝/06. 결정 트리.ipynb
+TIL_머신러닝/12. 선형회귀모델.ipynb
+TIL_머신러닝/human_activity/activity_labels.txt
+TIL_머신러닝/human_activity/features.txt
+TIL_머신러닝/human_activity/test/X_test.txt
+TIL_머신러닝/human_activity/test/y_test.txt
+TIL_머신러닝/human_activity/train/X_train.txt
+TIL_머신러닝/human_activity/train/y_train.txt
+TIL_머신러닝/실습용 데이터/diabetes.csv
+TIL_머신러닝/실습용 데이터/train_bike.csv
+TIL_머신러닝/실습용 데이터/train_house.csv
+TIL_머신러닝/실습용 데이터/train_santander.csv
+TIL_머신러닝/실습용 데이터/train_titanic.csv
+TIL_스파크/04-문제풀기.ipynb
+TIL_스파크/데이터 엔지니어링.md
+TIL_스파크/data.zip
+TIL_스파크/Kafka.md
+TIL_스파크/RDD 실습 1. 영화 별점 카운트.ipynb
+TIL_스파크/RDD 실습 2. 나이대 별로 몇명의 사람이 있는지 세어보기.ipynb
+TIL_스파크/RDD 실습 3. 최저 온도 찾기.ipynb
+TIL_스파크/RDD 실습 4. 책에 나온 단어 개수 세기(wordcount).ipynb
+TIL_스파크/TIL_카프카/01_consumer.py
+TIL_스파크/TIL_카프카/01_producer.py
+TIL_실습/결정트리 실습_사용자행동인식데이터세트/분류_Grid,보팅,랜덤포레스트실습.ipynb
+TIL_코딩테스트/시뮬레이션과 창의적 해결법.ipynb
+TIL_크롤링/02. HTML 스크래이핑.ipynb
+TIL_크롤링/03. G마켓 베스트 상품 크롤링.ipynb
+TIL_크롤링/04. 사이트 API 크롤링.ipynb
+TIL_클린코드/keyword.md
+TIL_파이썬/Pandas.ipynb
+project/문서 군집화_문서간 유사도.ipynb
+TIL_딥러닝/Computer Vision/01. CNN을 활용한 MNIST 데이터 세트 분류기 만들기.ipynb
+TIL_머신러닝/06. 결정 트리.ipynb
+TIL_머신러닝/12. 선형회귀모델.ipynb
+TIL_스파크/데이터 엔지니어링.md
+TIL_코딩테스트/시뮬레이션과 창의적 해결법.ipynb
+TIL_파이썬/Pandas.ipynb
+TIL_코딩테스트/시뮬레이션과 창의적 해결법.ipynb
+project/문서 군집화_문서간 유사도.ipynb
