@@ -176,3 +176,15 @@ TIL_실습/타이타닉_생존자예측/gender_submission.csv
 TIL_실습/타이타닉_생존자예측/test.csv
 TIL_실습/타이타닉_생존자예측/train.csv
 TIL_실습/피마_인디언_당뇨병_예측/diabetes.csv
+TIL_딥러닝/NLP_업데이트/[실습 과제] 한국어 리뷰 데이터 워드클라우드 시각화.ipynb
+TIL_딥러닝/NLP_업데이트/01. Text Preprocessing의 사본.ipynb
+TIL_딥러닝/NLP_업데이트/02. Text Tokenization, Integer Encoding의 사본.ipynb
+TIL_딥러닝/NLP_업데이트/03. Text Vectorization의 사본.ipynb
+TIL_딥러닝/NLP_업데이트/04. Text Mining - WordCloud의 사본.ipynb
+TIL_딥러닝/NLP_업데이트/05. Text Mining - Topic Modeling의 사본.ipynb
+TIL_딥러닝/NLP_업데이트/06. Text Mining - Document Clustering, Document Similarity의 사본.ipynb
+TIL_딥러닝/NLP_업데이트/RNN/01. 기본 RNN 작동 방식 알아보기.ipynb
+TIL_딥러닝/NLP_업데이트/RNN/02. 변형된 RNN.ipynb
+TIL_딥러닝/NLP_업데이트/RNN/03. LSTM을 이용한 텍스트 분류 모델 만들기.ipynb
+TIL_딥러닝/NLP_업데이트/RNN/04. 1D CNN을 이용한 텍스트 분류 모델 만들기.ipynb
+TIL_딥러닝/NLP_업데이트/RNN/05. Seq2Seq 기본 구현하기.ipynb
