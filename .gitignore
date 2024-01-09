@@ -188,3 +188,7 @@ TIL_딥러닝/NLP_업데이트/RNN/02. 변형된 RNN.ipynb
 TIL_딥러닝/NLP_업데이트/RNN/03. LSTM을 이용한 텍스트 분류 모델 만들기.ipynb
 TIL_딥러닝/NLP_업데이트/RNN/04. 1D CNN을 이용한 텍스트 분류 모델 만들기.ipynb
 TIL_딥러닝/NLP_업데이트/RNN/05. Seq2Seq 기본 구현하기.ipynb
+TIL_실습/캐글_신용카드사기검출/creditcard.csv
+TIL_실습/santander-customer-satisfaction/sample_submission.csv
+TIL_실습/santander-customer-satisfaction/test.csv
+TIL_실습/santander-customer-satisfaction/train_santander.csv
