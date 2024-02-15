@@ -1,0 +1,5 @@
+n = int(input())
+k = int(input())
+idx = sorted(list(map(int,input().split())))
+dist = sorted([idx[i+1]-idx[i] for i in range(n-1)], reverse=True)
+print(sum(dist[k-1:]))
