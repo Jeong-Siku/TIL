@@ -208,3 +208,8 @@ TIL_실습/네이버영화평점데이터/ratings_train.txt
 TIL_실습/네이버영화평점데이터/ratings.txt
 TIL_실습/텍스트분석실습/mercari_train.tsv
 TIL_실습/텍스트분석실습/test.tsv
+TIL_실습/TMDB5000영화데이터세트/tmdb_5000_credits.csv
+TIL_실습/TMDB5000영화데이터세트/tmdb_5000_movies.csv
+TIL_실습/아이템기반최근접이웃협업필터링실습/movies.csv
+TIL_실습/아이템기반최근접이웃협업필터링실습/ratings_noh.csv
+TIL_실습/아이템기반최근접이웃협업필터링실습/ratings.csv
